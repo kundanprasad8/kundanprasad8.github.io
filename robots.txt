@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://directresult.pages.dev/sitemap.xml
