@@ -59,9 +59,10 @@
   .btn-primary{background:linear-gradient(90deg,#0e9a94,#7c3aed);color:#fff;box-shadow:0 10px 30px rgba(124,58,237,.35)}
   .btn-outline{border:1.5px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.05)}
   .photo-wrap{text-align:center;position:relative}
-  .photo-ring{width:300px;height:300px;margin:0 auto;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,var(--teal),var(--violet),var(--pink),var(--teal));animation:spin 9s linear infinite}
+  .photo-ring{width:300px;height:300px;margin:0 auto;border-radius:50%;position:relative}
+  .photo-ring::before{content:"";position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(from 0deg,var(--teal),var(--violet),var(--teal));animation:spin 12s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .photo{width:100%;height:100%;object-fit:cover;border-radius:50%;border:6px solid var(--bg);display:block;animation:floaty 6s ease-in-out infinite}
+  .photo{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:50%;border:6px solid var(--bg);display:block;animation:floaty 6s ease-in-out infinite}
   @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
   .photo-cap{margin-top:16px;color:var(--faint);font-size:14px}
   .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:28px}
