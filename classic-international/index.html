@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Classic International, Ranchi — Courier, Packers &amp; Movers, Tour &amp; Travel</title>
-<meta name="description" content="Classic International, Harmu Road Ranchi — 21+ years trusted courier, packers & movers and tour & travel services. IBA Approved. Rated 4.8★ on Google. Call +91 93344 22909.">
+<meta name="description" content="Classic International, Harmu Road Ranchi — 21+ years trusted courier, packers & movers and tour & travel services. IBA Approved. Rated 4.8 stars on Google. Call +91 93344 22909.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
@@ -13,53 +13,77 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#0b1f3a;--navy2:#12294d;--amber:#f59e0b;--orange:#ea580c;--light:#f5f7fb;--text:#1e293b;--muted:#64748b}
-body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text);line-height:1.6;background:#fff;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
+@keyframes floatSlow{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-25px) scale(1.08)}}
+@keyframes floatSlow2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-35px,20px) scale(1.12)}}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes shine{from{transform:translateX(-120%) skewX(-20deg)}to{transform:translateX(240%) skewX(-20deg)}}
+.reveal{opacity:0}
+.reveal.visible{animation:fadeUp .8s ease forwards}
 .topbar{background:var(--navy);color:#cbd5e1;font-size:13px;padding:8px 5%}
 .topbar .wrap{max-width:1200px;margin:0 auto;display:flex;gap:20px;flex-wrap:wrap;justify-content:space-between}
 .topbar a{color:#fff;font-weight:600}
-header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 16px rgba(11,31,58,.08)}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);box-shadow:0 2px 16px rgba(11,31,58,.08)}
 .nav{max-width:1200px;margin:0 auto;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .logo{font-size:22px;font-weight:800;color:var(--navy);line-height:1.1}
 .logo span{color:var(--orange)}
 .logo small{display:block;font-size:11px;font-weight:600;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase}
 .navlinks{display:flex;gap:22px;font-weight:600;font-size:14px}
 .navlinks a:hover{color:var(--orange)}
-.btn{display:inline-block;background:var(--orange);color:#fff!important;padding:12px 24px;border-radius:10px;font-weight:700;font-size:15px;border:0;cursor:pointer}
-.btn:hover{background:#c2410c}
+.btn{position:relative;overflow:hidden;display:inline-block;background:var(--orange);color:#fff!important;padding:12px 24px;border-radius:10px;font-weight:700;font-size:15px;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(234,88,12,.35)}
+.btn::after{content:"";position:absolute;top:0;left:0;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:translateX(-120%) skewX(-20deg)}
+.btn:hover::after{animation:shine .7s ease}
 .btn-outline{background:#fff;color:var(--navy)!important;border:2px solid var(--navy)}
 .btn-amber{background:var(--amber);color:#1e293b!important}
-.hero{background:linear-gradient(120deg,var(--navy) 0%,var(--navy2) 55%,#1e3a5f 100%);color:#fff}
-.hero .wrap{max-width:1200px;margin:0 auto;padding:56px 5%;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
-.hero h1{font-size:44px;line-height:1.15;font-weight:800}
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#0b1f3a,#12294d,#1e3a5f,#0b1f3a);background-size:300% 300%;animation:gradientShift 18s ease infinite;color:#fff}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none}
+.orb1{width:420px;height:420px;background:#f59e0b;top:-120px;right:8%;animation:floatSlow 11s ease-in-out infinite}
+.orb2{width:340px;height:340px;background:#0ea5a5;bottom:-140px;left:-60px;animation:floatSlow2 13s ease-in-out infinite}
+.orb3{width:220px;height:220px;background:#ea580c;top:45%;left:42%;opacity:.3;animation:floatSlow 9s ease-in-out infinite}
+.hero .wrap{position:relative;max-width:1200px;margin:0 auto;padding:56px 5%;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{font-size:44px;line-height:1.15;font-weight:800;animation:fadeUp .8s ease both}
 .hero h1 em{font-style:normal;color:var(--amber)}
-.hero p.lead{color:#cbd5e1;margin:16px 0 24px;font-size:17px}
-.hero-img{border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.hero p.lead{color:#cbd5e1;margin:16px 0 24px;font-size:17px;animation:fadeUp .8s .15s ease both}
+.hero-img{border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35);animation:floatY 6s ease-in-out infinite}
 .hero-img img{width:100%;height:380px;object-fit:cover}
-.dual{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
-.dual .card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:18px}
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;animation:fadeUp .8s .3s ease both}
+.dual .card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:18px;transition:transform .25s,background .25s}
+.dual .card:hover{transform:translateY(-4px);background:rgba(255,255,255,.14)}
 .dual .card h3{font-size:17px;margin-bottom:4px}
 .dual .card p{font-size:13.5px;color:#cbd5e1;margin-bottom:12px}
-.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;animation:fadeUp .8s .45s ease both}
 .stat b{font-size:24px;display:block}
 .stat span{font-size:13px;color:#94a3b8}
+.marquee{overflow:hidden;background:var(--amber);padding:12px 0;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:0;animation:marquee 28s linear infinite}
+.marquee-track span{font-weight:800;font-size:15px;color:#1e293b;padding:0 22px;letter-spacing:.3px}
 section{padding:64px 5%}
 .wrap{max-width:1200px;margin:0 auto}
 .kicker{color:var(--orange);font-weight:800;letter-spacing:2px;font-size:12px;text-transform:uppercase}
 h2{font-size:32px;color:var(--navy);margin:8px 0 10px;line-height:1.25}
 .sub{color:var(--muted);max-width:720px;margin-bottom:32px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.svc{background:var(--light);border-radius:16px;padding:26px;border:1px solid #e2e8f0}
+.svc{background:var(--light);border-radius:16px;padding:26px;border:1px solid #e2e8f0;transition:transform .25s,box-shadow .25s}
+.svc:hover{transform:translateY(-5px);box-shadow:0 16px 32px rgba(11,31,58,.12)}
 .svc .ic{font-size:30px;margin-bottom:10px}
 .svc h3{font-size:18px;color:var(--navy);margin-bottom:6px}
 .svc p{font-size:14.5px;color:var(--muted)}
-.tour{background:linear-gradient(120deg,#0f766e,#115e59);color:#fff}
+.tour{position:relative;overflow:hidden;background:linear-gradient(120deg,#0f766e,#115e59,#0f766e);background-size:300% 300%;animation:gradientShift 20s ease infinite;color:#fff}
+.tour .orb1{background:#14b8a6;opacity:.35}
 .tour h2{color:#fff}
 .tour .sub{color:#ccfbf1}
 .tour .svc{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16)}
 .tour .svc h3{color:#fff}
 .tour .svc p{color:#ccfbf1}
+.tour-banner{border-radius:18px;overflow:hidden;margin-bottom:34px;box-shadow:0 20px 44px rgba(0,0,0,.3)}
+.tour-banner img{width:100%;height:340px;object-fit:cover}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .step{text-align:center;padding:10px}
 .step .n{width:52px;height:52px;border-radius:50%;background:var(--amber);color:#1e293b;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
@@ -68,10 +92,12 @@ h2{font-size:32px;color:var(--navy);margin:8px 0 10px;line-height:1.25}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{background:var(--light);border:1px solid #e2e8f0;padding:9px 18px;border-radius:999px;font-weight:600;font-size:14px}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.gallery img{border-radius:12px;height:190px;width:100%;object-fit:cover}
+.gallery img{border-radius:12px;height:190px;width:100%;object-fit:cover;transition:transform .3s}
+.gallery img:hover{transform:scale(1.03)}
 .gallery img:first-child{grid-column:span 2;grid-row:span 2;height:392px}
 .reviews{background:var(--light)}
-.rev{background:#fff;border-radius:16px;padding:26px;border:1px solid #e2e8f0}
+.rev{background:#fff;border-radius:16px;padding:26px;border:1px solid #e2e8f0;transition:transform .25s,box-shadow .25s}
+.rev:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(11,31,58,.1)}
 .rev .stars{color:var(--amber);letter-spacing:2px}
 .rev p{font-size:15px;margin:10px 0}
 .rev b{color:var(--navy)}
@@ -86,7 +112,8 @@ footer{background:var(--navy);color:#94a3b8;padding:40px 5% 24px;font-size:14px}
 footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
 footer h4{color:#fff;margin-bottom:10px}
 footer a:hover{color:#fff}
-.wa{position:fixed;right:20px;bottom:20px;z-index:60;background:#25d366;color:#fff;font-weight:800;padding:14px 20px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;background:#25d366;color:#fff;font-weight:800;padding:14px 20px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .2s}
+.wa:hover{transform:scale(1.05)}
 @media(max-width:900px){
   .hero .wrap,.contact-grid{grid-template-columns:1fr}
   .grid{grid-template-columns:1fr 1fr}
@@ -96,6 +123,7 @@ footer a:hover{color:#fff}
   .navlinks{display:none}
   .hero h1{font-size:32px}
   .hero-img img{height:260px}
+  .tour-banner img{height:220px}
   footer .wrap{grid-template-columns:1fr}
 }
 @media(max-width:560px){.grid,.steps{grid-template-columns:1fr}.dual{grid-template-columns:1fr}}
@@ -120,19 +148,21 @@ footer a:hover{color:#fff}
   <a class="btn" href="#contact">Get Free Quote</a>
 </div></header>
 
-<section class="hero"><div class="wrap">
+<section class="hero">
+  <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
+  <div class="wrap">
   <div>
-    <h1>Ranchi se poore India tak — <em>Courier, Shifting</em> aur <em>Tour</em>, ek hi jagah.</h1>
-    <p class="lead">21+ saal ka bharosa. IBA Approved Classic International — parcel aur household shifting se lekar flight, hotel aur holiday packages tak, sab kuch ek chhat ke neeche.</p>
+    <h1>From Ranchi to All India — <em>Courier, Shifting</em> &amp; <em>Tours</em>, All in One Place.</h1>
+    <p class="lead">Trusted for over 21 years. IBA Approved Classic International — from parcels and household shifting to flights, hotels and holiday packages, everything under one roof.</p>
     <div class="dual">
       <div class="card">
         <h3>📦 Courier &amp; Packers-Movers</h3>
-        <p>Safe packing, car/bike transport, ghar aur office shifting — Ranchi se all India.</p>
+        <p>Safe packing, car/bike transport, home and office shifting — from Ranchi to all India.</p>
         <a class="btn btn-amber" href="#courier">Courier Services →</a>
       </div>
       <div class="card">
         <h3>✈️ Tour &amp; Travel</h3>
-        <p>Flight tickets, hotel booking, car rental aur customized holiday packages.</p>
+        <p>Flight tickets, hotel bookings, car rentals and customized holiday packages.</p>
         <a class="btn" href="#tours">Plan My Trip →</a>
       </div>
     </div>
@@ -144,42 +174,50 @@ footer a:hover{color:#fff}
     </div>
   </div>
   <div class="hero-img">
-    <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLfYyCQl7jOk_xLXRpuVZhJ6juCpskR3GDliLOAgQ9JjwccXWUlvy1w2De0idGIlxolC-_dcnQTNghKPZnQWPkkriuWPupkpyt8-oNrIOfvb3sTBAWULH4C23KGPlZc7zE56__kLW1MIMdru=w1200" alt="Classic International car carrier truck, Ranchi">
+    <img src="assets/hero-car-carrier.jpg" alt="Modern enclosed car carrier truck with cars at sunset">
   </div>
 </div></section>
 
-<section id="courier"><div class="wrap">
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+  <span>📦 Domestic Courier</span><span>🏠 Household Shifting</span><span>🏢 Office Relocation</span><span>🚗 Car &amp; Bike Transport</span><span>✈️ Flight Tickets</span><span>🏨 Hotel Booking</span><span>🚐 Car &amp; Coach Rental</span><span>🛂 Passport &amp; Visa</span><span>🧳 Holiday Packages</span><span>👨‍👩‍👧‍👦 Group Tours</span>
+  <span>📦 Domestic Courier</span><span>🏠 Household Shifting</span><span>🏢 Office Relocation</span><span>🚗 Car &amp; Bike Transport</span><span>✈️ Flight Tickets</span><span>🏨 Hotel Booking</span><span>🚐 Car &amp; Coach Rental</span><span>🛂 Passport &amp; Visa</span><span>🧳 Holiday Packages</span><span>👨‍👩‍👧‍👦 Group Tours</span>
+</div></div>
+
+<section id="courier"><div class="wrap reveal">
   <div class="kicker">Service 1 — Courier &amp; Relocation</div>
-  <h2>Parcel ho ya poora ghar — safe, on-time delivery.</h2>
-  <p class="sub">Trained team, quality packing material aur closed carrier vehicles. Household shifting, office relocation aur vehicle transport — Ranchi se Jharkhand, Bihar, West Bengal aur poore India tak.</p>
+  <h2>Parcel or an Entire Home — Safe, On-Time Delivery.</h2>
+  <p class="sub">A trained team, quality packing material and closed carrier vehicles. Household shifting, office relocation and vehicle transport — from Ranchi to Jharkhand, Bihar, West Bengal and all over India.</p>
   <div class="grid">
-    <div class="svc"><div class="ic">📦</div><h3>Domestic Courier &amp; Parcel</h3><p>Documents, parcels aur packages ki fast aur trackable delivery — local se lekar all India.</p></div>
-    <div class="svc"><div class="ic">🏠</div><h3>Household Shifting</h3><p>Ghar ka poora saaman — packing, loading, transport, unloading aur setup tak complete service.</p></div>
-    <div class="svc"><div class="ic">🏢</div><h3>Office Relocation</h3><p>Office furniture, computers aur records ki systematic shifting — minimum downtime ke saath.</p></div>
-    <div class="svc"><div class="ic">🚗</div><h3>Car &amp; Bike Transport</h3><p>Enclosed carriers me car aur bike ki safe interstate transport, door-to-door.</p></div>
-    <div class="svc"><div class="ic">🛡️</div><h3>Safe Packing &amp; Loading</h3><p>Bubble wrap, corrugated sheets aur waterproof packing — har item carefully handled.</p></div>
-    <div class="svc"><div class="ic">🗺️</div><h3>Interstate &amp; Intercity Moving</h3><p>Ranchi se Jamshedpur, Patna, Dhanbad, Bokaro, Kolkata aur all India routes.</p></div>
+    <div class="svc"><div class="ic">📦</div><h3>Domestic Courier &amp; Parcel</h3><p>Fast, trackable delivery of documents, parcels and packages — local to all India.</p></div>
+    <div class="svc"><div class="ic">🏠</div><h3>Household Shifting</h3><p>Complete home shifting — packing, loading, transport, unloading and setup.</p></div>
+    <div class="svc"><div class="ic">🏢</div><h3>Office Relocation</h3><p>Systematic shifting of office furniture, computers and records — with minimum downtime.</p></div>
+    <div class="svc"><div class="ic">🚗</div><h3>Car &amp; Bike Transport</h3><p>Safe interstate vehicle transport in enclosed carriers, door to door.</p></div>
+    <div class="svc"><div class="ic">🛡️</div><h3>Safe Packing &amp; Loading</h3><p>Bubble wrap, corrugated sheets and waterproof packing — every item handled with care.</p></div>
+    <div class="svc"><div class="ic">🗺️</div><h3>Interstate &amp; Intercity Moving</h3><p>Routes from Ranchi to Jamshedpur, Patna, Dhanbad, Bokaro, Kolkata and all India.</p></div>
   </div>
-  <h2 style="margin-top:48px;font-size:24px">Kaise kaam karta hai?</h2>
+  <h2 style="margin-top:48px;font-size:24px">How It Works</h2>
   <div class="steps" style="margin-top:16px">
-    <div class="step"><div class="n">1</div><h4>Call / WhatsApp karein</h4><p>Apna pickup, destination aur items batayein.</p></div>
-    <div class="step"><div class="n">2</div><h4>Free Survey &amp; Quote</h4><p>Transparent, reasonably priced quotation — koi hidden charge nahi.</p></div>
-    <div class="step"><div class="n">3</div><h4>Safe Packing</h4><p>Trained team har item ko carefully pack aur load karti hai.</p></div>
-    <div class="step"><div class="n">4</div><h4>On-Time Delivery</h4><p>Safe transport aur destination par timely, damage-free delivery.</p></div>
+    <div class="step"><div class="n">1</div><h4>Call / WhatsApp Us</h4><p>Share your pickup point, destination and items.</p></div>
+    <div class="step"><div class="n">2</div><h4>Free Survey &amp; Quote</h4><p>Transparent, reasonably priced quotation — no hidden charges.</p></div>
+    <div class="step"><div class="n">3</div><h4>Safe Packing</h4><p>Our trained team packs and loads every item carefully.</p></div>
+    <div class="step"><div class="n">4</div><h4>On-Time Delivery</h4><p>Safe transport and timely, damage-free delivery at destination.</p></div>
   </div>
 </div></section>
 
-<section id="tours" class="tour"><div class="wrap">
-  <div class="kicker">Service 2 — Tour &amp; Travel</div>
-  <h2>Holiday planning se lekar visa tak — hum sambhalte hain.</h2>
-  <p class="sub">Family vacation, honeymoon, group tour ya business trip — aapke budget aur pasand ke hisaab se customized packages, domestic aur international dono.</p>
+<section id="tours" class="tour">
+  <div class="orb orb1"></div>
+  <div class="wrap reveal" style="position:relative">
+  <div class="kicker" style="color:#fcd34d">Service 2 — Tour &amp; Travel</div>
+  <h2>From Holiday Planning to Visa — We Handle It All.</h2>
+  <p class="sub">Family vacation, honeymoon, group tour or business trip — customized packages built around your budget and preferences, domestic and international.</p>
+  <div class="tour-banner"><img src="assets/tour-banner.jpg" alt="Tour coach on a scenic Himalayan mountain road at sunrise"></div>
   <div class="grid">
-    <div class="svc"><div class="ic">✈️</div><h3>Flight Ticketing</h3><p>Domestic aur international flights ki best-fare booking, kisi bhi airline ke saath.</p></div>
-    <div class="svc"><div class="ic">🏨</div><h3>Hotel Booking</h3><p>Budget se lekar premium tak — har destination par verified hotel options.</p></div>
-    <div class="svc"><div class="ic">🚐</div><h3>Car &amp; Coach Rental</h3><p>Local sightseeing, airport transfer aur outstation trips ke liye car aur coach.</p></div>
-    <div class="svc"><div class="ic">🛂</div><h3>Passport &amp; Visa Assistance</h3><p>Passport aur visa documentation me step-by-step guidance aur support.</p></div>
-    <div class="svc"><div class="ic">🧳</div><h3>Customized Holiday Packages</h3><p>Aapki dates, budget aur interests ke hisaab se bana hua personal itinerary.</p></div>
-    <div class="svc"><div class="ic">👨‍👩‍👧‍👦</div><h3>Group &amp; Family Tours</h3><p>Group tours, school trips aur family holidays — complete planning ke saath.</p></div>
+    <div class="svc"><div class="ic">✈️</div><h3>Flight Ticketing</h3><p>Best-fare bookings on domestic and international flights, across airlines.</p></div>
+    <div class="svc"><div class="ic">🏨</div><h3>Hotel Booking</h3><p>Verified hotel options at every destination — from budget to premium.</p></div>
+    <div class="svc"><div class="ic">🚐</div><h3>Car &amp; Coach Rental</h3><p>Cars and coaches for local sightseeing, airport transfers and outstation trips.</p></div>
+    <div class="svc"><div class="ic">🛂</div><h3>Passport &amp; Visa Assistance</h3><p>Step-by-step guidance and support for passport and visa documentation.</p></div>
+    <div class="svc"><div class="ic">🧳</div><h3>Customized Holiday Packages</h3><p>A personal itinerary built around your dates, budget and interests.</p></div>
+    <div class="svc"><div class="ic">👨‍👩‍👧‍👦</div><h3>Group &amp; Family Tours</h3><p>Group tours, school trips and family holidays — planned end to end.</p></div>
   </div>
   <div style="margin-top:36px">
     <div class="kicker" style="color:#fcd34d">Popular Routes &amp; Destinations</div>
@@ -196,10 +234,10 @@ footer a:hover{color:#fff}
   </div>
 </div></section>
 
-<section id="gallery"><div class="wrap">
-  <div class="kicker">Gallery — Hamara Kaam</div>
-  <h2>Asli photos — hamare trucks, packing aur vehicle carriers.</h2>
-  <p class="sub">Ye photos Classic International ke Google Business Profile se li gayi hain.</p>
+<section id="gallery"><div class="wrap reveal">
+  <div class="kicker">Gallery — Our Work</div>
+  <h2>Real Photos — Our Trucks, Packing &amp; Vehicle Carriers.</h2>
+  <p class="sub">These photos are from Classic International's Google Business Profile.</p>
   <div class="gallery">
     <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLfYyCQl7jOk_xLXRpuVZhJ6juCpskR3GDliLOAgQ9JjwccXWUlvy1w2De0idGIlxolC-_dcnQTNghKPZnQWPkkriuWPupkpyt8-oNrIOfvb3sTBAWULH4C23KGPlZc7zE56__kLW1MIMdru=w1200" alt="Car carrier">
     <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9ReZ4JzpwZgTnolYUzADNX-dMBYFbLrLH17RUMbgsXM5rtM8VfpkHzf7p570szZZZTip50kqhsSm5zAtDqTt7MihXgG0GfYB_LhAHrlL-BwnuWePs_LpPmeCVEKdjbt98bbMBk=w1200" alt="Packed boxes">
@@ -211,28 +249,28 @@ footer a:hover{color:#fff}
   </div>
 </div></section>
 
-<section id="reviews" class="reviews"><div class="wrap">
+<section id="reviews" class="reviews"><div class="wrap reveal">
   <div class="kicker">Customer Reviews</div>
-  <h2>Log kya kehte hain — 4.8 ★ Google par.</h2>
+  <h2>What Customers Say — 4.8 ★ on Google.</h2>
   <div class="grid" style="margin-top:28px">
-    <div class="rev"><div class="stars">★★★★★</div><p>“Ranchi se Bangalore household shifting karwayi — poora experience extremely satisfying raha.”</p><b>Sahil</b> <span>· Google Review</span></div>
-    <div class="rev"><div class="stars">★★★★★</div><p>“Team highly professional aur trustworthy thi, saaman ko utmost care ke saath handle kiya.”</p><b>Ayushman Malakar</b> <span>· Google Review</span></div>
-    <div class="rev"><div class="stars">★★★★★</div><p>“Ranchi se Pune move kiya — process smooth aur hassle-free raha, great experience.”</p><b>Pratyush Agrawal</b> <span>· Google Review</span></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>“I shifted my household items from Ranchi to Bangalore — the entire experience was extremely satisfying.”</p><b>Sahil</b> <span>· Google Review</span></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>“The team was highly professional and trustworthy, and handled my belongings with utmost care.”</p><b>Ayushman Malakar</b> <span>· Google Review</span></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>“I moved from Ranchi to Pune — the process was smooth and hassle-free. A great experience.”</p><b>Pratyush Agrawal</b> <span>· Google Review</span></div>
   </div>
-  <p style="margin-top:20px;font-size:14px;color:var(--muted)">124 five-star, 7 four-star reviews ke saath Google par 4.8 rating — poori reviews <a style="color:var(--orange);font-weight:700" href="https://www.google.com/maps/place//@23.3632929,85.3100442,17z/data=!3m1!4b1!4m3!3m2!1s0x39f4e16ec903527b:0x376ecafa47ca1eb3!12e1?entry=ttu" target="_blank" rel="noopener">Google Profile par dekhein →</a></p>
+  <p style="margin-top:20px;font-size:14px;color:var(--muted)">124 five-star and 7 four-star reviews on Google, rated 4.8 — read all reviews on the <a style="color:var(--orange);font-weight:700" href="https://www.google.com/maps/place//@23.3632929,85.3100442,17z/data=!3m1!4b1!4m3!3m2!1s0x39f4e16ec903527b:0x376ecafa47ca1eb3!12e1?entry=ttu" target="_blank" rel="noopener">Google Profile →</a></p>
 </div></section>
 
-<section id="contact"><div class="wrap">
+<section id="contact"><div class="wrap reveal">
   <div class="kicker">Free Quote / Enquiry</div>
-  <h2>Quote chahiye? 2 minute me enquiry bhejein.</h2>
-  <p class="sub">Form bharein — aapki enquiry seedha WhatsApp par Classic International tak pahunchegi.</p>
+  <h2>Need a Quote? Send an Enquiry in 2 Minutes.</h2>
+  <p class="sub">Fill in the form — your enquiry goes straight to Classic International on WhatsApp.</p>
   <div class="contact-grid">
     <form onsubmit="sendWA(event)">
-      <label>Apna Naam</label>
+      <label>Your Name</label>
       <input id="f-name" type="text" placeholder="e.g. Rahul Kumar" required>
       <label>Mobile Number</label>
       <input id="f-phone" type="tel" placeholder="10-digit mobile" required>
-      <label>Service Chunein</label>
+      <label>Select Service</label>
       <select id="f-service">
         <option>Courier / Parcel</option>
         <option>Household Shifting</option>
@@ -242,11 +280,11 @@ footer a:hover{color:#fff}
         <option>Flight / Hotel Booking</option>
         <option>Passport / Visa Help</option>
       </select>
-      <label>Pickup / From — Destination / To</label>
+      <label>From — To</label>
       <input id="f-route" type="text" placeholder="e.g. Ranchi → Bangalore">
       <label>Message</label>
-      <textarea id="f-msg" rows="3" placeholder="Items, dates ya trip details likhein..."></textarea>
-      <button class="btn" type="submit" style="width:100%">WhatsApp par Enquiry Bhejein →</button>
+      <textarea id="f-msg" rows="3" placeholder="Items, dates or trip details..."></textarea>
+      <button class="btn" type="submit" style="width:100%">Send Enquiry on WhatsApp →</button>
     </form>
     <div>
       <div class="map"><iframe title="Classic International location map" src="https://maps.google.com/maps?q=Classic%20International%20Harmu%20Road%20Ranchi&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe></div>
@@ -265,7 +303,7 @@ footer a:hover{color:#fff}
 <footer><div class="wrap">
   <div>
     <h4>CLASSIC INTERNATIONAL</h4>
-    <p>Ranchi ka bharosemand naam — courier, packers &amp; movers aur tour &amp; travel, 21+ saal se. Safe packing, transparent pricing aur on-time service.</p>
+    <p>Ranchi's trusted name for over 21 years — courier, packers &amp; movers and tour &amp; travel. Safe packing, transparent pricing and on-time service.</p>
   </div>
   <div>
     <h4>Services</h4>
@@ -278,19 +316,23 @@ footer a:hover{color:#fff}
 </div>
 <p style="text-align:center;margin-top:30px;color:#64748b">© 2026 Classic International, Ranchi. All rights reserved.</p></footer>
 
-<a class="wa" href="https://wa.me/919334422909?text=Namaste!%20Mujhe%20Classic%20International%20ki%20service%20ke%20baare%20me%20jaankari%20chahiye." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+<a class="wa" href="https://wa.me/919334422909?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20Classic%20International%27s%20services." target="_blank" rel="noopener">💬 WhatsApp Us</a>
 
 <script>
 function sendWA(e){
   e.preventDefault();
-  var t = "Namaste Classic International!%0A%0A" +
-    "Naam: " + encodeURIComponent(document.getElementById('f-name').value) + "%0A" +
+  var t = "Hello Classic International!%0A%0A" +
+    "Name: " + encodeURIComponent(document.getElementById('f-name').value) + "%0A" +
     "Mobile: " + encodeURIComponent(document.getElementById('f-phone').value) + "%0A" +
     "Service: " + encodeURIComponent(document.getElementById('f-service').value) + "%0A" +
     "Route: " + encodeURIComponent(document.getElementById('f-route').value) + "%0A" +
     "Message: " + encodeURIComponent(document.getElementById('f-msg').value);
   window.open("https://wa.me/919334422909?text=" + t, "_blank");
 }
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 </script>
 </body>
 </html>
